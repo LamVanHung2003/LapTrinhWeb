@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap-Modal</title>
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../jquery-3.4.1.min.js"></script>
+    <script src="../bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+</head>
+<body>
+    <button  type="button" class="btn btn-primary  justify-content-center m-3" data-toggle="modal" data-target="#loginRegisterModal">
+        Open Modal
+    </button>
+
+    <div class="modal fade" id="loginRegisterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="nav nav-tabs" id="myTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true" style="color: orange;">ĐĂNG NHẬP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false" style="color: orange;">ĐĂNG KÝ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-body tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        <!-- Login Form -->
+                        <form id="loginForm">
+                            <div>Vui lòng đăng nhập trước khi mua vé để tích lũy điểm, cơ hội nhận thêm nhiều ưu đãi từ chương trình thành viên Galaxy Cinema.</div>
+                            <form action="">
+                                <div class="row form-group">
+                                        <div class="col-12">
+                                            <input type="text" class="form-control" id="txtemal" placeholder="Email">
+                                        </div> 
+                                    </div>
+                                    <div class="row form-group">
+                                            <div class="col-12">
+                                                <input type="password" class="form-control" id="txtmk" placeholder="Mat khau">
+                                            </div> 
+                                    </div>
+                            </form>
+                            <div>Quên mật khẩu?</div>
+                                <div class=" btn " style="width: 99%;background-color: orange;" data-dismiss="modal">ĐĂNG NHẬP</div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                        <!-- Register Form -->
+                        <form action="Register">
+                            <div class="row form-group">
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" id="txtHoTen" placeholder="Họ tên">
+                                    </div> 
+                                </div>
+                                <div class="row form-group">
+                                        <div class="col-6">
+                                            <input type="tel" class="form-control" id="txtsdt" placeholder="Số điện thoại">
+                                        </div> 
+                                        <div class="col-6">
+                                            <select  name="Giới tính" class="form-control" id="Gioitinh"   >
+                                                <option>Giới tính</option>
+                                                <option value="Nam">Nam</option>
+                                                <option value="Nữ">Nữ</option>
+                                            </select>
+                                        </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" id="txtemail" placeholder="Email">
+                                    </div> 
+                                 </div>
+                                 <div class="row form-group">
+                                    <div class="col-6">
+                                        <input type="password" class="form-control" id="txtmk" placeholder="Mật khẩu">
+                                    </div> 
+                                    <div class="col-6">
+                                        <input type="password" class="form-control" id="txtnmk" placeholder=" Xác nhận mật khẩu">
+                                    </div>
+                                  </div>
+                                  <div class="row form-group">
+                                    <div class="col-6">
+                                        <select name="ThanhPho" class="form-control" id="thanhpho">
+                                            <option >Chọn thành phố</option>
+                                            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                            <option value="Hà Nội">Hà Nội</option>
+                                        </select>
+                                    </div> 
+                                    <div class="col-6">
+                                        <select name="Quận" class="form-control" id="Quan">
+                                            <option>Quận</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </div>
+                                 </div>
+                                    <div class="row form-group">
+                                        <div class="col-12">
+                                            <input type="text" class="form-control" id="txtdc" placeholder="Địa chỉ">
+                                        </div> 
+                                     </div>
+                                     <div class="row form-group">
+                                        <div class="col-12">
+                                            <input type="date" class="form-control" id="txttime" placeholder="chọn ngày (dd/mm/yy)">
+                                        </div> 
+                                     </div>
+                                     <div>Tôi đã đọc và đồng ý với <b style="color: orange;">CHÍNH SÁCH</b> của chương trình </div>
+                                     <div class=" btn " style="width: 99%;background-color: orange;" data-dismiss="modal">ĐĂNG KÝ</div>
+                                    </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

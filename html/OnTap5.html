@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
+    <script src="../Bootstrap/jquery-3.6.4.js"></script>
+    <script src="../Bootstrap/js/bootstrap.js"></script>
+    <script src="../html/OnTap5.js"></script>
+    <style>
+        #er1,#er2,#er3{
+            color: red;
+            font-style: italic;
+        }
+        .er{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="row border ">
+            <div class="col-3 bg-warning " style="height: 100px;">
+                <img src="../IMG/logo7.png" alt="">
+            </div>
+            <div class="col-9 bg-warning" style="height: 100px;">
+                <nav class="navbar navbar-expand">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item"><a href="" class="nav-link">Trang chủ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Giới thiệu</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Dịch vụ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link" data-target="#frmdk" data-toggle="modal">Ký gửi hàng hóa</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Liên hệ</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row border">
+            <div class="col-9  border" style="height: 250px;" ></div>
+            <div class="col-3 border bg-light" style="height: 250px;">
+                <h5>Qui định thanh toán</h5>
+              <ul>
+                <li>Khách cọc từ 70% - 100% số tiền của đơn hàng.</li>
+                <li>Hàng về sau 24-48 tiếng kể từ khi kho Trung Quốc ký nhận.</li>
+                <li>Shop sẽ thanh lý đơn hàng nếu sau 1 tuần khách hàng không thanh toán tiền nhận hàng.</li>
+              </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 border" style="height: 500px; ">
+                <h3 class="text-primary" >Danh sách kiện hàng hóa gửi</h3>
+                <table class="table table-bordered" id="xuat">
+                    <tr>
+                        <th>STT</th>
+                        <th>Số Serial</th>
+                        <th>Mô tả kiện hàng</th>
+                        <th>Hình ảnh </th>
+                        <th>Trọng lượng(KG)</th>
+                        <th>Phí vận chuyển(VND)</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 bg-warning">
+                <p class="text-primary text-center ">MSSV:21093341;Họ và tên: Lâm Văn Hưng</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="frmdk">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Thông tin kiện hàng hóa gửi</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row form-group">
+                            <div class="col-3">
+                                <label for="">Số serial:</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" id="txtma"class="form-control" >
+                                <span id="er1">*</span>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-3">
+                                <label for="">Mô tả kiện hàng:</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" id="txtmota"class="form-control" >
+                                <span id="er2">*</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row form-group">
+                            <div class="col-3">
+                                <label for="">Hình ảnh:</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="file" id="hinhanh" >
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-3">
+                                <label for="">Trọng lượng(kg):</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" id="txttl"class="form-control" >
+                                <span id="er3">*</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row form-group">
+                            <div class="col-3">
+                                <label for="">Chi phí vận chuyển:</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" id="chiphi"class="form-control" readonly >
+                            </div>
+                        </div>
+                        <button type="button" id="btn" class="text-primary border-primary bg-light" style="border-radius: 5px;">Xác nhận</button>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
